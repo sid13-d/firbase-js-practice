@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>Member List</h2>
+        </header>
+        <div class="table-wrapper">
+            <table class="user-table">
+                <tr>
+                    <th>first name</th>
+                    <th>last name</th>
+                    <th>phone no</th>
+                    <th>email id</th>
+                    <th>buttons</th>
+                </tr>
+
+            </table>
+            <button class="btn btn-addUser">Add user</button>
+        </div>
+
+
+        <div class="add-modal modal-wrapper">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Add new user</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form" autocomplete="off">
+                        <input type="text" name="firstname" placeholder="first name">
+                        <input type="text" name="lastname" placeholder="last name">
+                        <input type="number" name="phone" placeholder="phone number">
+                        <input type="email" name="email" placeholder="email">
+                        <button class="btn btn-modal">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+    <script>
+        // Import the functions you need from the SDKs you need
+        // import { firebase, initializeApp } from "firebase/app";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCGZnH-4kOcI5gAdywOninBHaukXst_al0",
+            authDomain: "crudproject-67603.firebaseapp.com",
+            projectId: "crudproject-67603",
+            storageBucket: "crudproject-67603.appspot.com",
+            messagingSenderId: "455690059779",
+            appId: "1:455690059779:web:05d497f7af86e345d0ce36"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
